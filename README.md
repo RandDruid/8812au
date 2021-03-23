@@ -1,3 +1,9 @@
+### Changes in this fork
+
+- Added new wonderland "PENTEST" ;) attached to channel plan 0x7F
+
+-----
+
 ##### [Click for USB WiFi Adapter Information for Linux](https://github.com/morrownr/USB-WiFi)
 
 -----

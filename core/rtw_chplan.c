@@ -62,6 +62,7 @@ enum rtw_rd_2g {
 	RTW_RD_2G_WORLD1 = 10,	/* Worldwide 11 */
 	RTW_RD_2G_KCC1 = 11,	/* Korea */
 	RTW_RD_2G_IC2 = 12,		/* Canada */
+	RTW_RD_2G_PENTEST = 13,	/* Pentest */
 
 	RTW_RD_2G_MAX,
 };
@@ -136,6 +137,7 @@ enum rtw_rd_5g {
 	RTW_RD_5G_FCC20 = 66,	/* FCC w/o Band3 */
 	RTW_RD_5G_FCC21 = 67,	/* FCC */
 	RTW_RD_5G_ETSI23 = 68,	/* Indonesia */
+	RTW_RD_5G_PENTEST = 69,	/* Pentest */
 
 	/* === Below are driver defined for legacy channel plan compatible, DON'T assign index ==== */
 	RTW_RD_5G_OLD_FCC1,
@@ -183,6 +185,7 @@ static struct ch_list_t RTW_ChannelPlan2G[] = {
 	/* 10, RTW_RD_2G_WORLD1 */	CH_LIST_ENT(11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11),
 	/* 11, RTW_RD_2G_KCC1 */	CH_LIST_ENT(13, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13),
 	/* 12, RTW_RD_2G_IC2 */		CH_LIST_ENT(11, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11),
+	/* 13, RTW_RD_2G_PENTEST */	CH_LIST_ENT(14, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14),
 };
 
 #if CONFIG_IEEE80211_BAND_5GHZ
@@ -256,6 +259,7 @@ static struct ch_list_t RTW_ChannelPlan5G[] = {
 	/* 66, RTW_RD_5G_FCC20 */	CH_LIST_ENT(13, 36, 40, 44, 48, 52, 56, 60, 64, 149, 153, 157, 161, 165),
 	/* 67, RTW_RD_5G_FCC21 */	CH_LIST_ENT(23, 36, 40, 44, 48, 52, 56, 60, 64, 100, 104, 108, 112, 116, 120, 124, 128, 136, 140, 149, 153, 157, 161, 165),
 	/* 68, RTW_RD_5G_ETSI23 */	CH_LIST_ENT(12, 36, 40, 44, 48, 52, 56, 60, 64, 149, 153, 157, 161),
+	/* 69, RTW_RD_5G_PENTEST */	CH_LIST_ENT(25, 36, 40, 44, 48, 52, 56, 60, 64, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144, 149, 153, 157, 161, 165),
 
 	/* === Below are driver defined for legacy channel plan compatible, NO static index assigned ==== */
 	/* RTW_RD_5G_OLD_FCC1 */	CH_LIST_ENT(20, 36, 40, 44, 48, 52, 56, 60, 64, 100, 104, 108, 112, 116, 136, 140, 149, 153, 157, 161, 165),
@@ -393,7 +397,7 @@ static struct chplan_ent_t RTW_ChannelPlanMap[RTW_CHPLAN_MAX] = {
 };
 
 static struct chplan_ent_t RTW_CHANNEL_PLAN_MAP_REALTEK_DEFINE =
-	CHPLAN_ENT(RTW_RD_2G_WORLD,		RTW_RD_5G_FCC1,		TXPWR_LMT_FCC);		/* 0x7F, Realtek Define */
+	CHPLAN_ENT(RTW_RD_2G_PENTEST,		RTW_RD_5G_PENTEST,		TXPWR_LMT_NONE);		/* 0x7F, Realtek Define */
 
 u8 rtw_chplan_get_default_regd(u8 id)
 {
