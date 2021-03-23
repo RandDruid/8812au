@@ -1,6 +1,9 @@
 ### Changes in this fork
 
-- Added new wonderland "PENTEST" ;) attached to channel plan 0x7F
+- Added new wonderland "PENTEST" ;) attached to channel plan 0x7F (dec 127), activated by default module config
+- All channels, not limited power
+- Disabled DFS check
+- Version bumped to v5.9.3.3_0.20210323, to solve dkms install issues
 
 -----
 
